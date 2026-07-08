@@ -5,7 +5,7 @@ import { MatrixBackgroundComponent } from '../../shared/matrix-background/matrix
 import { QuestProgressService } from '../../quest/quest-progress.service';
 import { GIFTS, Gift, TOTAL_STEPS } from '../../quest/quest.model';
 import { NumberOrderChallengeComponent } from '../../quest/challenges/number-order-challenge/number-order-challenge.component';
-import { BugHuntChallengeComponent } from '../../quest/challenges/bug-hunt-challenge/bug-hunt-challenge.component';
+import { WhackSignalChallengeComponent } from '../../quest/challenges/whack-signal-challenge/whack-signal-challenge.component';
 import { SimonSaysChallengeComponent } from '../../quest/challenges/simon-says-challenge/simon-says-challenge.component';
 import { PairMatchChallengeComponent } from '../../quest/challenges/pair-match-challenge/pair-match-challenge.component';
 import { FindDuckChallengeComponent } from '../../quest/challenges/find-duck-challenge/find-duck-challenge.component';
@@ -16,7 +16,7 @@ import { FindDuckChallengeComponent } from '../../quest/challenges/find-duck-cha
   imports: [
     MatrixBackgroundComponent,
     NumberOrderChallengeComponent,
-    BugHuntChallengeComponent,
+    WhackSignalChallengeComponent,
     SimonSaysChallengeComponent,
     PairMatchChallengeComponent,
     FindDuckChallengeComponent

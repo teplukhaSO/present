@@ -1,0 +1,13 @@
+<h2 class="challenge-title">Злови сигнал</h2>
+<p class="challenge-hint">Тисни на клітинку, поки вона світиться. Впіймано: {{ hits }} / {{ targetHits }}</p>
+
+<div class="signal-grid">
+  @for (i of gridIndices; track i) {
+    <button
+      type="button"
+      class="signal-tile"
+      [class.is-lit]="litIndex === i"
+      (click)="hit(i)"
+    ></button>
+  }
+</div>
