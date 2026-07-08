@@ -18,6 +18,14 @@
   box-sizing: border-box;
 }
 
+.thanks-photo {
+  width: min(320px, 70vw);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 255, 102, 0.4);
+  box-shadow: 0 0 30px rgba(0, 255, 102, 0.2);
+}
+
 .thanks-title {
   font-family: 'Courier New', monospace;
   color: #00ff66;
@@ -40,6 +48,10 @@
 }
 
 @media (max-width: 480px) {
+  .thanks-photo {
+    width: min(220px, 65vw);
+  }
+
   .thanks-title {
     font-size: 1.4rem;
   }
