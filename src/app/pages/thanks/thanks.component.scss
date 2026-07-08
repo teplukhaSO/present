@@ -18,18 +18,34 @@
   box-sizing: border-box;
 }
 
-.thanks-text {
+.thanks-title {
   font-family: 'Courier New', monospace;
   color: #00ff66;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 2rem;
-  margin: 0;
+  margin: 0 0 1.25rem;
+  text-align: center;
   text-shadow: 0 0 20px rgba(0, 255, 102, 0.8);
 }
 
+.thanks-message {
+  font-family: 'Courier New', monospace;
+  color: #7dffb0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0;
+  text-align: center;
+}
+
 @media (max-width: 480px) {
-  .thanks-text {
+  .thanks-title {
     font-size: 1.4rem;
+  }
+
+  .thanks-message {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 }
