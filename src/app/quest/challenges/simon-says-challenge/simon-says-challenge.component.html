@@ -1,0 +1,23 @@
+<h2 class="challenge-title">Повтори послідовність</h2>
+<p class="challenge-hint">
+  @if (status === 'playing' && !error) { Дивись уважно... }
+  @if (status === 'input') { Тепер повтори у тому ж порядку }
+  @if (error) { Помилка. Спробуй ще раз. }
+</p>
+
+<div class="pad-grid">
+  @for (pad of pads; track pad) {
+    <button
+      type="button"
+      class="pad"
+      [class]="pad"
+      [class.active]="activePad === pad"
+      [disabled]="status !== 'input'"
+      (click)="press(pad)"
+    ></button>
+  }
+</div>
+
+@if (error) {
+  <button class="challenge-btn" type="button" (click)="startRound()">Спробувати ще раз</button>
+}

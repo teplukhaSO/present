@@ -1,0 +1,56 @@
+:host {
+  gap: 1.5rem;
+}
+
+.pad-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.pad {
+  width: 90px;
+  height: 90px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  opacity: 0.55;
+  transition: all 0.15s ease;
+
+  &.green {
+    background: #00ff66;
+  }
+
+  &.blue {
+    background: #2b6bff;
+  }
+
+  &.purple {
+    background: #a24bff;
+  }
+
+  &.white {
+    background: #e8e8e8;
+  }
+
+  &.active {
+    opacity: 1;
+    box-shadow: 0 0 30px currentColor;
+    transform: scale(1.05);
+  }
+
+  &:not(:disabled):hover {
+    opacity: 0.85;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: 480px) {
+  .pad {
+    width: 70px;
+    height: 70px;
+  }
+}
