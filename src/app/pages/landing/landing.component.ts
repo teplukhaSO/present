@@ -15,6 +15,8 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
   private drops: number[] = [];
   private fontSize = 16;
   private animationFrameId = 0;
+  private lastFrameTime = 0;
+  private readonly frameInterval = 65;
   private readonly resizeHandler = () => this.setupCanvas();
 
   ngAfterViewInit(): void {
@@ -39,7 +41,14 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
     this.drops = new Array(columns).fill(1);
   }
 
-  private draw = (): void => {
+  private draw = (time: number = 0): void => {
+    this.animationFrameId = requestAnimationFrame(this.draw);
+
+    if (time - this.lastFrameTime < this.frameInterval) {
+      return;
+    }
+    this.lastFrameTime = time;
+
     const canvas = this.canvasRef.nativeElement;
 
     this.ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
@@ -60,7 +69,5 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
       }
       this.drops[i]++;
     }
-
-    this.animationFrameId = requestAnimationFrame(this.draw);
   };
 }
