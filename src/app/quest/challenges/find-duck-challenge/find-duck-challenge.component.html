@@ -1,0 +1,13 @@
+<h2 class="challenge-title">🦆 Знайди качку</h2>
+<p class="challenge-hint">Серед сигналів ховається одна гумова качечка. Знайди її.</p>
+
+<div class="duck-grid">
+  @for (tile of tiles; track $index) {
+    <button
+      type="button"
+      class="duck-tile"
+      [class.is-wrong]="wrongIndex === $index"
+      (click)="select($index)"
+    >{{ tile }}</button>
+  }
+</div>

@@ -1,0 +1,28 @@
+<app-matrix-background></app-matrix-background>
+
+<div class="content">
+  <div class="challenge-card finish-card">
+    <h1 class="title">Усі квести пройдено! Але це ще не все...</h1>
+    <p class="subtitle">Ти отримуєш повний набір подарунків від AICheaters:</p>
+
+    <ul class="gift-list">
+      @for (gift of gifts; track gift.step) {
+        <li class="gift-item">
+          <span class="gift-emoji">{{ gift.emoji }}</span>
+          <span class="gift-name">{{ gift.name }}</span>
+        </li>
+      }
+    </ul>
+
+    <p class="hidden-hint">Десь на екрані ховається останній сигнал. Знайди і впіймай його.</p>
+  </div>
+</div>
+
+<button
+  type="button"
+  class="chasing-dot"
+  [style.left.%]="dotX"
+  [style.top.%]="dotY"
+  (click)="catchDot()"
+  aria-label="Прихований сигнал"
+></button>

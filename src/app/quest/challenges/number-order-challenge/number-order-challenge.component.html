@@ -1,0 +1,15 @@
+<h2 class="challenge-title">Активуй клітинки</h2>
+<p class="challenge-hint">Тисни цифри по порядку від 1 до 9</p>
+
+<div class="number-grid">
+  @for (num of numbers; track num; let i = $index) {
+    <button
+      type="button"
+      class="number-tile"
+      [class.is-done]="num < nextExpected"
+      [class.is-wrong]="wrongIndex === i"
+      [disabled]="num < nextExpected"
+      (click)="select(num, i)"
+    >{{ num }}</button>
+  }
+</div>

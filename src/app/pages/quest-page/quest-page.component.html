@@ -1,0 +1,31 @@
+<app-matrix-background></app-matrix-background>
+
+<div class="content">
+  <p class="progress">Квест {{ step }} / {{ totalSteps }}</p>
+
+  @if (!solved) {
+    @switch (step) {
+      @case (1) {
+        <app-number-order-challenge (solved)="onSolved()"></app-number-order-challenge>
+      }
+      @case (2) {
+        <app-bug-hunt-challenge (solved)="onSolved()"></app-bug-hunt-challenge>
+      }
+      @case (3) {
+        <app-simon-says-challenge (solved)="onSolved()"></app-simon-says-challenge>
+      }
+      @case (4) {
+        <app-pair-match-challenge (solved)="onSolved()"></app-pair-match-challenge>
+      }
+      @case (5) {
+        <app-find-duck-challenge (solved)="onSolved()"></app-find-duck-challenge>
+      }
+    }
+  } @else {
+    <div class="challenge-card reveal">
+      <div class="gift-emoji">{{ gift.emoji }}</div>
+      <p class="gift-message">{{ gift.message }}</p>
+      <button class="challenge-btn" type="button" (click)="continue()">Продовжити</button>
+    </div>
+  }
+</div>

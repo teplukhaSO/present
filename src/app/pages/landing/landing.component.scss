@@ -7,13 +7,6 @@
   background: #000;
 }
 
-.matrix-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .content {
   position: relative;
   z-index: 1;
@@ -38,7 +31,7 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #00ff66;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.8);
   border: 2px solid #00ff66;
   border-radius: 16px;
   padding: 0.9rem 2.5rem;
@@ -49,7 +42,7 @@
 
   &:hover,
   &:focus-visible {
-    background: rgba(0, 255, 102, 0.1);
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 24px rgba(0, 255, 102, 0.7), inset 0 0 20px rgba(0, 255, 102, 0.25);
   }
 
