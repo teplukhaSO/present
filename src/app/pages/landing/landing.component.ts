@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatrixBackgroundComponent } from '../../shared/matrix-background/matrix-background.component';
-import { QuestProgressService } from '../../quest/quest-progress.service';
 
 @Component({
   selector: 'app-landing',
@@ -11,12 +10,9 @@ import { QuestProgressService } from '../../quest/quest-progress.service';
   styleUrl: './landing.component.scss'
 })
 export class LandingComponent {
-  constructor(
-    private readonly router: Router,
-    private readonly questProgress: QuestProgressService
-  ) {}
+  constructor(private readonly router: Router) {}
 
   start(): void {
-    this.router.navigate(['/quest', this.questProgress.nextStep]);
+    this.router.navigate(['/quest', 1]);
   }
 }

@@ -1,0 +1,14 @@
+<h2 class="challenge-title">Знайди пару</h2>
+<p class="challenge-hint">Серед восьми символів рівно два однакові. Знайди пару.</p>
+
+<div class="pair-grid">
+  @for (tile of tiles; track $index) {
+    <button
+      type="button"
+      class="pair-tile"
+      [class.is-selected]="firstIndex === $index"
+      [class.is-wrong]="!!wrongPair && wrongPair.includes($index)"
+      (click)="select($index)"
+    >{{ tile }}</button>
+  }
+</div>

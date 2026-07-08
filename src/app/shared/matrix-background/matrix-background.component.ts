@@ -38,7 +38,8 @@ export class MatrixBackgroundComponent implements AfterViewInit, OnDestroy {
 
     this.fontSize = window.innerWidth < 600 ? 14 : 18;
     const columns = Math.ceil(canvas.width / this.fontSize);
-    this.drops = new Array(columns).fill(1);
+    const rows = Math.ceil(canvas.height / this.fontSize);
+    this.drops = Array.from({ length: columns }, () => Math.floor(Math.random() * rows));
   }
 
   private draw = (time: number = 0): void => {

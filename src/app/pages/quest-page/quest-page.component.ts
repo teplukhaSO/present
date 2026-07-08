@@ -4,22 +4,22 @@ import { Subscription } from 'rxjs';
 import { MatrixBackgroundComponent } from '../../shared/matrix-background/matrix-background.component';
 import { QuestProgressService } from '../../quest/quest-progress.service';
 import { GIFTS, Gift, TOTAL_STEPS } from '../../quest/quest.model';
-import { DecodeChallengeComponent } from '../../quest/challenges/decode-challenge/decode-challenge.component';
+import { NumberOrderChallengeComponent } from '../../quest/challenges/number-order-challenge/number-order-challenge.component';
 import { BugHuntChallengeComponent } from '../../quest/challenges/bug-hunt-challenge/bug-hunt-challenge.component';
 import { SimonSaysChallengeComponent } from '../../quest/challenges/simon-says-challenge/simon-says-challenge.component';
-import { PasswordChallengeComponent } from '../../quest/challenges/password-challenge/password-challenge.component';
-import { DuckFixChallengeComponent } from '../../quest/challenges/duck-fix-challenge/duck-fix-challenge.component';
+import { PairMatchChallengeComponent } from '../../quest/challenges/pair-match-challenge/pair-match-challenge.component';
+import { FindDuckChallengeComponent } from '../../quest/challenges/find-duck-challenge/find-duck-challenge.component';
 
 @Component({
   selector: 'app-quest-page',
   standalone: true,
   imports: [
     MatrixBackgroundComponent,
-    DecodeChallengeComponent,
+    NumberOrderChallengeComponent,
     BugHuntChallengeComponent,
     SimonSaysChallengeComponent,
-    PasswordChallengeComponent,
-    DuckFixChallengeComponent
+    PairMatchChallengeComponent,
+    FindDuckChallengeComponent
   ],
   templateUrl: './quest-page.component.html',
   styleUrl: './quest-page.component.scss'

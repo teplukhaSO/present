@@ -6,7 +6,7 @@
   @if (!solved) {
     @switch (step) {
       @case (1) {
-        <app-decode-challenge (solved)="onSolved()"></app-decode-challenge>
+        <app-number-order-challenge (solved)="onSolved()"></app-number-order-challenge>
       }
       @case (2) {
         <app-bug-hunt-challenge (solved)="onSolved()"></app-bug-hunt-challenge>
@@ -15,10 +15,10 @@
         <app-simon-says-challenge (solved)="onSolved()"></app-simon-says-challenge>
       }
       @case (4) {
-        <app-password-challenge (solved)="onSolved()"></app-password-challenge>
+        <app-pair-match-challenge (solved)="onSolved()"></app-pair-match-challenge>
       }
       @case (5) {
-        <app-duck-fix-challenge (solved)="onSolved()"></app-duck-fix-challenge>
+        <app-find-duck-challenge (solved)="onSolved()"></app-find-duck-challenge>
       }
     }
   } @else {

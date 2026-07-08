@@ -2,7 +2,7 @@
 
 <div class="content">
   <div class="challenge-card finish-card">
-    <h1 class="title">Усі квести пройдено!</h1>
+    <h1 class="title">Усі квести пройдено! Але це ще не все...</h1>
     <p class="subtitle">Ти отримуєш повний набір подарунків від AICheaters:</p>
 
     <ul class="gift-list">
@@ -13,5 +13,16 @@
         </li>
       }
     </ul>
+
+    <p class="hidden-hint">Десь на екрані ховається останній сигнал. Знайди і впіймай його.</p>
   </div>
 </div>
+
+<button
+  type="button"
+  class="chasing-dot"
+  [style.left.%]="dotX"
+  [style.top.%]="dotY"
+  (click)="catchDot()"
+  aria-label="Прихований сигнал"
+></button>
